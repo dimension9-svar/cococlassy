@@ -14,27 +14,14 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Studios */}
-          <div>
-            <h4 className="font-mono text-[10px] tracking-[0.15em] uppercase text-cream/40 mb-4">
-              Studios
-            </h4>
-            <ul className="space-y-2 text-[14px] text-cream/65">
-              <li>01 &middot; Sandton</li>
-              <li>02 &middot; Sea Point</li>
-              <li className="text-cream/35">03 &middot; Stellenbosch (soon)</li>
-            </ul>
-          </div>
-
           {/* Quick links */}
           <div>
             <h4 className="font-mono text-[10px] tracking-[0.15em] uppercase text-cream/40 mb-4">
-              Studio
+              Explore
             </h4>
             <ul className="space-y-2 text-[14px]">
               <li><a href="#method" className="text-cream/65 hover:text-cream transition-colors">The Method</a></li>
               <li><a href="#classes" className="text-cream/65 hover:text-cream transition-colors">Classes</a></li>
-              <li><a href="#instructors" className="text-cream/65 hover:text-cream transition-colors">Instructors</a></li>
               <li><a href="#juice" className="text-cream/65 hover:text-cream transition-colors">Juice Bar</a></li>
               <li><a href="#pricing" className="text-cream/65 hover:text-cream transition-colors">Pricing</a></li>
             </ul>

@@ -34,9 +34,6 @@ export function Nav() {
           <a href="#classes" className="font-mono text-[10px] tracking-[0.15em] uppercase text-cocoa hover:text-espresso transition-colors">
             Classes
           </a>
-          <a href="#instructors" className="font-mono text-[10px] tracking-[0.15em] uppercase text-cocoa hover:text-espresso transition-colors">
-            Team
-          </a>
           <a href="#juice" className="font-mono text-[10px] tracking-[0.15em] uppercase text-cocoa hover:text-espresso transition-colors">
             Juice Bar
           </a>
@@ -68,7 +65,7 @@ export function Nav() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-cream border-t border-line px-6 pb-6 pt-4 flex flex-col gap-4">
-          {["method", "classes", "instructors", "juice", "pricing"].map((id) => (
+          {["method", "classes", "juice", "pricing"].map((id) => (
             <a
               key={id}
               href={`#${id}`}

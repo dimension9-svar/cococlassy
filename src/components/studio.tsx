@@ -23,9 +23,9 @@ export function Studio() {
         {/* Studio cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {[
-            { number: "01", name: "Sandton", status: "Now open" },
-            { number: "02", name: "Sea Point", status: "Now open" },
-            { number: "03", name: "Stellenbosch", status: "Coming soon" },
+            { number: "01", name: "Sandton" },
+            { number: "02", name: "Sea Point" },
+            { number: "03", name: "Stellenbosch" },
           ].map((studio) => (
             <div
               key={studio.number}
@@ -36,9 +36,6 @@ export function Studio() {
               </span>
               <span className="font-serif font-medium text-[18px] tracking-[-0.02em] mt-3">
                 {studio.name}
-              </span>
-              <span className="font-mono text-[9px] tracking-[0.15em] uppercase text-cream/50 mt-3">
-                {studio.status}
               </span>
             </div>
           ))}

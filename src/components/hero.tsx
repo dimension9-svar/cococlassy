@@ -38,21 +38,6 @@ export function Hero() {
           </span>
         </div>
 
-        {/* Micro social proof */}
-        <div className="mt-16 md:mt-24 flex items-center gap-4 border-t border-line-soft pt-6">
-          <div className="flex -space-x-2">
-            {[0, 1, 2, 3, 4].map((i) => (
-              <div
-                key={i}
-                className="w-8 h-8 rounded-full border-2 border-cream bg-toffee"
-                style={{ backgroundColor: ["#C9A57A", "#E8D4B8", "#A8D91F", "#D4C4B0", "#8A7A6B"][i] }}
-              />
-            ))}
-          </div>
-          <p className="font-mono text-[10px] tracking-[0.08em] uppercase text-muted">
-            240+ women &middot; Sandton &middot; Sea Point &middot; Stellenbosch
-          </p>
-        </div>
       </div>
     </section>
   );
