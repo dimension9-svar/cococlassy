@@ -18,10 +18,7 @@ export function Nav() {
       style={{ padding: compact ? "14px 40px" : "20px 40px" }}
     >
       {/* Brand lockup */}
-      <a href="#" className="inline-flex items-center gap-2.5 no-underline text-inherit">
-        <div className="w-[30px] h-[30px] rounded-full border-[1.5px] border-current flex items-center justify-center shrink-0">
-          <span className="w-2 h-2 rounded-full bg-charge-deep shadow-[0_0_10px_var(--charge)]" />
-        </div>
+      <a href="#" className="no-underline text-inherit">
         <span className="font-serif font-bold text-[24px] tracking-[-0.025em] leading-none">
           Coco<span className="text-charge-deep">Classy</span>
         </span>
