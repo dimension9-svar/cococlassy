@@ -1,13 +1,7 @@
 export function Hero() {
   return (
     <section className="relative min-h-[100dvh] flex items-center bg-cream overflow-hidden">
-      {/* Background texture — subtle diagonal lines */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: "repeating-linear-gradient(45deg, var(--espresso) 0, var(--espresso) 1px, transparent 0, transparent 50%)",
-        backgroundSize: "8px 8px"
-      }} />
-
-      <div className="relative max-w-[1200px] mx-auto px-6 md:px-10 pt-28 pb-20 md:pt-36 md:pb-28 w-full">
+      <div className="max-w-[1200px] mx-auto px-6 md:px-10 pt-28 pb-20 md:pt-36 md:pb-28 w-full">
         {/* Section label */}
         <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-charge-deep mb-8 flex items-center gap-3">
           <span className="w-7 h-px bg-charge-deep" />
