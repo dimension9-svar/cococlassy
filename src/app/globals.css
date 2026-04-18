@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --shell: #F6EFE4;
+  --cream: #FBF6ED;
+  --ivory: #FFFDF7;
+  --toffee: #E8D4B8;
+  --toffee-deep: #C9A57A;
+  --espresso: #1A0F08;
+  --cocoa: #3D2416;
+  --charge: #D4FF3A;
+  --charge-deep: #A8D91F;
+  --charge-soft: #E8FF85;
+  --muted: #8A7A6B;
+  --line: rgba(26,15,8,0.14);
+  --line-soft: rgba(26,15,8,0.07);
+}
+
+@theme inline {
+  --color-shell: var(--shell);
+  --color-cream: var(--cream);
+  --color-ivory: var(--ivory);
+  --color-toffee: var(--toffee);
+  --color-toffee-deep: var(--toffee-deep);
+  --color-espresso: var(--espresso);
+  --color-cocoa: var(--cocoa);
+  --color-charge: var(--charge);
+  --color-charge-deep: var(--charge-deep);
+  --color-charge-soft: var(--charge-soft);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter Tight', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--cream);
+  color: var(--espresso);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--charge);
+  color: var(--espresso);
+}
+
+html {
+  scroll-behavior: smooth;
+}
