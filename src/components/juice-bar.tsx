@@ -1,87 +1,52 @@
 export function JuiceBar() {
   const juices = [
-    {
-      number: "001",
-      name: "The Green One",
-      tag: "Anti-Inflam",
-      ingredients: "Cucumber, celery, green apple, ginger, lemon, turmeric",
-      color: "#A8D91F",
-    },
-    {
-      number: "002",
-      name: "The Glow",
-      tag: "Skin + Gut",
-      ingredients: "Beetroot, carrot, orange, ginger, activated charcoal rim",
-      color: "#C0392B",
-    },
-    {
-      number: "003",
-      name: "The Reset",
-      tag: "Post-Class",
-      ingredients: "Pineapple, mint, coconut water, lime, sea salt",
-      color: "#F1C40F",
-    },
-    {
-      number: "004",
-      name: "The Deep",
-      tag: "Immunity",
-      ingredients: "Activated charcoal, lemon, honey, cayenne, filtered water",
-      color: "#2C3E50",
-    },
+    { code: "N\u00B0001 \u00B7 THE GREEN ONE", name: "Green Glow", desc: "Kale, cucumber, green apple, lemon, ginger, mint.", price: "R 68", tag: "ANTI-INFLAM" },
+    { code: "N\u00B0002 \u00B7 BEET DRIVEN", name: "Ruby Rush", desc: "Beetroot, carrot, orange, turmeric, black pepper. Pre-class rocket fuel.", price: "R 72", tag: "PRE-WORKOUT" },
+    { code: "N\u00B0003 \u00B7 CITRUS WAKE", name: "Golden Hour", desc: "Orange, pineapple, turmeric, lemon, cayenne. Morning in a glass.", price: "R 65", tag: "IMMUNE" },
+    { code: "N\u00B0004 \u00B7 BLUSH", name: "Watermelon Rose", desc: "Watermelon, strawberry, rose water, lime. A soft reset.", price: "R 68", tag: "HYDRATE" },
+    { code: "N\u00B0005 \u00B7 PROTEIN", name: "Classy Shake", desc: "Banana, almond butter, cacao, oat milk, collagen. Post-reformer ritual.", price: "R 85", tag: "RECOVERY" },
+    { code: "N\u00B0006 \u00B7 NIGHT", name: "Quiet Mind", desc: "Tart cherry, chamomile, magnesium, honey. Your 7pm wind-down.", price: "R 78", tag: "SLEEP" },
   ];
 
   return (
-    <section id="juice" className="bg-shell">
-      <div className="max-w-[1200px] mx-auto px-6 md:px-10 py-20 md:py-32">
-        <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-charge-deep mb-4 flex items-center gap-3">
-          <span className="w-7 h-px bg-charge-deep" />
-          The Juice Bar
+    <section id="juice" className="bg-espresso text-cream py-[90px] md:py-[140px] px-5 md:px-10 relative overflow-hidden">
+      {/* Green glow */}
+      <div className="absolute -top-[200px] -left-[200px] w-[600px] h-[600px] opacity-[0.18] blur-[80px] pointer-events-none"
+        style={{ background: "radial-gradient(circle, var(--charge) 0%, transparent 60%)" }}
+      />
+
+      <div className="max-w-[1400px] mx-auto relative z-[2]">
+        {/* Section label */}
+        <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-charge flex items-center gap-3 mb-6">
+          <span className="w-7 h-px bg-charge" />
+          02 &middot; The Juice Bar
         </div>
 
-        <h2 className="font-serif font-medium text-[clamp(30px,5vw,48px)] leading-[1.02] tracking-[-0.035em] mb-6 max-w-[600px]">
-          Pressed this morning.{" "}
-          <em className="not-italic font-semibold text-charge-deep">For you</em>.
-        </h2>
+        {/* Header */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-end mb-[70px]">
+          <h2 className="font-serif font-medium text-[clamp(50px,6.6vw,96px)] leading-[0.98] tracking-[-0.04em]">
+            Pressed this morning.{" "}
+            <span className="text-charge font-semibold">For you.</span>
+          </h2>
+          <div className="text-cream/70 text-[15px] leading-[1.6] max-w-[380px]">
+            Every juice on the menu is cold-pressed in our studio kitchen within the last 24 hours. No concentrates. No heat. No shortcuts. Just what your body actually wanted after class.
+          </div>
+        </div>
 
-        <p className="text-cocoa text-[17px] leading-[1.6] max-w-[520px] mb-14">
-          The juice bar is not an add-on. It&apos;s proof that we thought about the forty minutes
-          after your class ends, not just the class itself. Glass where possible.
-          Cream exterior, espresso lid, charge-green stripe.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        {/* Menu grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 bg-cream/[0.12] border border-cream/[0.12]" style={{ gap: "1px" }}>
           {juices.map((j) => (
-            <div
-              key={j.number}
-              className="bg-cream border border-line rounded-xl overflow-hidden hover:border-charge-deep/30 transition-colors"
-            >
-              {/* Color bar */}
-              <div className="h-2" style={{ backgroundColor: j.color }} />
-
-              <div className="p-6">
-                <span className="font-mono text-[9px] tracking-[0.15em] uppercase text-muted">
-                  N&deg;{j.number}
-                </span>
-
-                <h3 className="font-serif font-medium text-[20px] tracking-[-0.02em] mt-2 mb-1">
-                  {j.name}
-                </h3>
-
-                <span className="inline-block font-mono text-[9px] tracking-[0.12em] uppercase text-charge-deep bg-charge/20 px-2.5 py-0.5 rounded-full mb-4">
-                  {j.tag}
-                </span>
-
-                <p className="text-cocoa text-[13px] leading-[1.6]">
-                  {j.ingredients}
-                </p>
+            <div key={j.code} className="bg-espresso p-[30px] md:p-[36px_30px] transition-colors hover:bg-cocoa group cursor-default">
+              <div className="font-mono text-[11px] tracking-[0.12em] text-charge mb-[18px]">{j.code}</div>
+              <div className="font-serif font-medium text-[28px] leading-[1.15] tracking-[-0.03em] mb-2 transition-colors group-hover:text-charge">{j.name}</div>
+              <div className="text-[13.5px] leading-[1.55] text-cream/65 mb-[22px]">{j.desc}</div>
+              <div className="font-mono text-[13px] text-cream pt-[14px] border-t border-cream/15 flex justify-between">
+                {j.price}
+                <span className="text-charge text-[10px] tracking-[0.1em]">{j.tag}</span>
               </div>
             </div>
           ))}
         </div>
-
-        <p className="font-mono text-[10px] tracking-[0.1em] uppercase text-muted mt-8 text-center">
-          All juices cold-pressed in-house &middot; No concentrates &middot; No heat &middot; Vegan &middot; Glass cups
-        </p>
       </div>
     </section>
   );

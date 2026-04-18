@@ -1,13 +1,14 @@
 import { Nav } from "@/components/nav";
 import { Hero } from "@/components/hero";
-import { Method } from "@/components/method";
-import { Studio } from "@/components/studio";
-import { Classes } from "@/components/classes";
+import { Marquee } from "@/components/marquee";
+import { Philosophy } from "@/components/philosophy";
+import { Offerings } from "@/components/offerings";
 import { JuiceBar } from "@/components/juice-bar";
-import { Pricing } from "@/components/pricing";
-import { FAQ } from "@/components/faq";
+import { Classes } from "@/components/classes";
+import { Locations } from "@/components/locations";
 import { FinalCTA } from "@/components/final-cta";
 import { Footer } from "@/components/footer";
+import { RevealScript } from "@/components/reveal-script";
 
 export default function Home() {
   return (
@@ -15,15 +16,16 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Method />
-        <Studio />
-        <Classes />
+        <Marquee />
+        <Philosophy />
+        <Offerings />
         <JuiceBar />
-        <Pricing />
-        <FAQ />
+        <Classes />
+        <Locations />
         <FinalCTA />
       </main>
       <Footer />
+      <RevealScript />
     </>
   );
 }
