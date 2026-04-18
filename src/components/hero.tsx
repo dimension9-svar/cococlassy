@@ -12,7 +12,6 @@ export function Hero() {
 
       {/* Copy */}
       <div className="relative z-[2]">
-        {/* Eyebrow */}
         <div className="reveal inline-flex items-center gap-2 font-mono text-[11px] font-medium tracking-[0.15em] uppercase text-cocoa px-[14px] py-[7px] border border-line rounded-full bg-ivory mb-7">
           <span className="w-[7px] h-[7px] rounded-full bg-charge-deep shadow-[0_0_8px_var(--charge-deep)]" style={{ animation: "blink 2s infinite" }} />
           Women&apos;s Pilates Lab &amp; Juice Bar
@@ -50,18 +49,28 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Visual cards */}
+      {/* Bento info cards */}
       <div className="relative z-[2] h-[440px] md:h-[620px] hidden md:block">
-        {/* Card 1 - large */}
-        <div className="absolute w-[62%] h-[72%] top-0 right-0 rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(26,15,8,0.25)] transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]"
-          style={{ background: "linear-gradient(135deg, rgba(26,15,8,0.1), rgba(26,15,8,0.35)), url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800') center/cover" }}
-        >
-          <span className="absolute top-[14px] left-[14px] bg-ivory px-[11px] py-[6px] rounded-full font-mono text-[10px] tracking-[0.1em] uppercase text-espresso font-medium">
-            The Lab
-          </span>
+        {/* Card 1 — The Studio */}
+        <div className="absolute w-[62%] h-[72%] top-0 right-0 rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(26,15,8,0.25)] bg-espresso text-cream p-8 flex flex-col justify-between transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]">
+          <div>
+            <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-charge">The Studio</span>
+            <div className="mt-4 flex items-end gap-3">
+              <span className="font-serif text-[72px] font-medium leading-none tracking-[-0.04em]">12</span>
+              <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-cream/60 pb-3">max per class</span>
+            </div>
+          </div>
+          <div>
+            <div className="font-serif text-[26px] font-medium tracking-[-0.03em] leading-[1.1] mb-2">
+              Springs. Straps. Stamina.
+            </div>
+            <p className="text-[13px] leading-[1.5] text-cream/60 max-w-[260px]">
+              Low-impact, high-intensity reformer work in a women-only studio. Lights low. Music loud. Form perfect.
+            </p>
+          </div>
         </div>
 
-        {/* Card 3 - green accent */}
+        {/* Card 2 — Today's Press */}
         <div className="absolute w-[32%] h-[32%] top-[38%] left-[48%] rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(26,15,8,0.25)] bg-charge border border-charge-deep flex items-center justify-center p-[18px] text-center transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]">
           <div>
             <div className="font-serif text-[20px] font-medium leading-[1.1] tracking-[-0.015em] text-espresso">Today&apos;s press</div>
@@ -70,13 +79,29 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Card 2 - bottom */}
-        <div className="absolute w-[54%] h-[58%] bottom-0 left-0 rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(26,15,8,0.25)] transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]"
-          style={{ background: "linear-gradient(180deg, transparent 40%, rgba(26,15,8,0.4)), url('https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=700') center/cover" }}
-        >
-          <span className="absolute top-[14px] left-[14px] bg-ivory px-[11px] py-[6px] rounded-full font-mono text-[10px] tracking-[0.1em] uppercase text-espresso font-medium">
-            Cold-pressed &middot; Daily
-          </span>
+        {/* Card 3 — Cold-pressed */}
+        <div className="absolute w-[54%] h-[58%] bottom-0 left-0 rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(26,15,8,0.25)] bg-shell border border-line p-7 flex flex-col justify-between transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]">
+          <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-charge-deep">Cold-pressed &middot; Daily</span>
+          <div>
+            <div className="font-serif text-[22px] font-medium tracking-[-0.025em] leading-[1.15] mb-3">
+              Pressed this morning. For you.
+            </div>
+            <div className="space-y-2">
+              {[
+                { code: "001", name: "Green Glow", tag: "Anti-inflam" },
+                { code: "002", name: "Ruby Rush", tag: "Pre-workout" },
+                { code: "003", name: "Golden Hour", tag: "Immune" },
+              ].map((j) => (
+                <div key={j.code} className="flex items-center justify-between border-t border-line pt-2">
+                  <div className="flex items-center gap-2">
+                    <span className="font-mono text-[9px] tracking-[0.1em] text-muted">N&deg;{j.code}</span>
+                    <span className="font-serif text-[14px] font-medium tracking-[-0.02em]">{j.name}</span>
+                  </div>
+                  <span className="font-mono text-[9px] tracking-[0.1em] text-charge-deep">{j.tag}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

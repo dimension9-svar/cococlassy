@@ -40,25 +40,67 @@ export function Philosophy() {
           </div>
         </div>
 
-        {/* Image side */}
+        {/* Highlight cards — replacing stock image */}
         <div className="relative">
-          <div
-            className="aspect-[4/5] rounded-2xl overflow-hidden relative"
-            style={{
-              background: "linear-gradient(135deg, rgba(26,15,8,0.15), rgba(26,15,8,0.4)), url('https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=900') center/cover",
-            }}
-          >
-            {/* Floating card */}
-            <div className="absolute bottom-6 left-6 right-6 bg-ivory/95 backdrop-blur-lg p-5 rounded-[10px]">
-              <div className="font-mono text-[10px] tracking-[0.15em] text-cocoa uppercase">Signature Class</div>
-              <div className="font-serif text-[22px] font-medium tracking-[-0.03em] mt-1">The Classy Reformer</div>
+          <div className="grid grid-cols-2 gap-4">
+            {/* Main highlight card */}
+            <div className="col-span-2 bg-espresso text-cream rounded-2xl p-8 relative overflow-hidden">
+              <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-charge mb-4">Signature Class</div>
+              <div className="font-serif text-[36px] md:text-[44px] font-medium tracking-[-0.035em] leading-[1.02] mb-3">
+                The Classy Reformer
+              </div>
+              <p className="text-cream/60 text-[14px] leading-[1.55] max-w-[360px]">
+                50 minutes of spring-loaded precision. Your heart rate climbs. Your form stays. This is where the work lives.
+              </p>
+              {/* Decorative element */}
+              <div className="absolute -bottom-8 -right-8 w-[160px] h-[160px] rounded-full border border-cream/10" />
+              <div className="absolute -bottom-16 -right-16 w-[240px] h-[240px] rounded-full border border-cream/[0.05]" />
+            </div>
+
+            {/* Women-only card */}
+            <div className="bg-charge border border-charge-deep rounded-2xl p-6 flex flex-col justify-between min-h-[180px]">
+              <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-espresso/70">Every studio</div>
+              <div>
+                <div className="font-serif text-[28px] font-semibold leading-[0.95] tracking-[-0.03em] text-espresso">Women-only</div>
+                <div className="font-mono text-[10px] tracking-[0.1em] text-espresso/70 mt-2">NO EXCEPTIONS</div>
+              </div>
+            </div>
+
+            {/* Juice card */}
+            <div className="bg-toffee rounded-2xl p-6 flex flex-col justify-between min-h-[180px]">
+              <div className="font-mono text-[10px] tracking-[0.15em] uppercase text-espresso/60">After class</div>
+              <div>
+                <div className="font-serif text-[28px] font-semibold leading-[0.95] tracking-[-0.03em] text-espresso">Fresh press</div>
+                <div className="font-mono text-[10px] tracking-[0.1em] text-espresso/60 mt-2">6 JUICES &middot; DAILY</div>
+              </div>
+            </div>
+
+            {/* Small format cards */}
+            <div className="bg-shell border border-line rounded-2xl p-5 flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-charge/30 border border-charge-deep/30 flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--charge-deep)" strokeWidth="1.5"><circle cx="12" cy="12" r="9" /><path d="M12 8v4l3 3" /></svg>
+              </div>
+              <div>
+                <div className="font-serif text-[16px] font-medium tracking-[-0.02em]">50-min sessions</div>
+                <div className="font-mono text-[9px] tracking-[0.1em] text-muted uppercase">In &middot; Sweat &middot; Glow</div>
+              </div>
+            </div>
+
+            <div className="bg-ivory border border-line rounded-2xl p-5 flex items-center gap-4">
+              <div className="w-10 h-10 rounded-full bg-charge/30 border border-charge-deep/30 flex items-center justify-center shrink-0">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--charge-deep)" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+              </div>
+              <div>
+                <div className="font-serif text-[16px] font-medium tracking-[-0.02em]">Small classes</div>
+                <div className="font-mono text-[9px] tracking-[0.1em] text-muted uppercase">Known by name</div>
+              </div>
             </div>
           </div>
 
           {/* Floating badge */}
-          <div className="absolute -top-5 -right-5 w-[140px] h-[140px] bg-charge rounded-full flex flex-col items-center justify-center -rotate-6 border border-charge-deep">
-            <div className="font-serif text-[32px] font-semibold leading-[0.9] text-espresso tracking-[-0.03em]">Glow</div>
-            <div className="font-mono text-[10px] tracking-[0.15em] text-espresso mt-1">FROM WITHIN</div>
+          <div className="absolute -top-5 -right-5 w-[120px] h-[120px] bg-charge rounded-full flex flex-col items-center justify-center -rotate-6 border border-charge-deep shadow-[0_8px_30px_-8px_rgba(168,217,31,0.4)] z-10">
+            <div className="font-serif text-[26px] font-semibold leading-[0.9] text-espresso tracking-[-0.03em]">Glow</div>
+            <div className="font-mono text-[9px] tracking-[0.15em] text-espresso mt-1">FROM WITHIN</div>
           </div>
         </div>
       </div>
