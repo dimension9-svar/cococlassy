@@ -72,7 +72,7 @@ export function Hero() {
 
         {/* Card 2 - bottom */}
         <div className="absolute w-[54%] h-[58%] bottom-0 left-0 rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(26,15,8,0.25)] transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]"
-          style={{ background: "linear-gradient(180deg, transparent 40%, rgba(26,15,8,0.4)), url('https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?w=700') center/cover" }}
+          style={{ background: "linear-gradient(180deg, transparent 40%, rgba(26,15,8,0.4)), url('https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=700') center/cover" }}
         >
           <span className="absolute top-[14px] left-[14px] bg-ivory px-[11px] py-[6px] rounded-full font-mono text-[10px] tracking-[0.1em] uppercase text-espresso font-medium">
             Cold-pressed &middot; Daily
