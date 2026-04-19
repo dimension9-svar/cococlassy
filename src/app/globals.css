@@ -2,9 +2,16 @@
 @import "tailwindcss";
 
 :root {
-  --shell: #F6EFE4;
+  /* Dark mode palette */
+  --bg: #0C0A08;
+  --surface: #141210;
+  --surface-raised: #1C1917;
+  --surface-overlay: #242120;
   --cream: #FBF6ED;
-  --ivory: #FFFDF7;
+  --cream-dim: rgba(251, 246, 237, 0.85);
+  --cream-muted: rgba(251, 246, 237, 0.55);
+  --cream-faint: rgba(251, 246, 237, 0.30);
+  --cream-ghost: rgba(251, 246, 237, 0.10);
   --toffee: #E8D4B8;
   --toffee-deep: #C9A57A;
   --espresso: #1A0F08;
@@ -12,15 +19,22 @@
   --charge: #D4FF3A;
   --charge-deep: #A8D91F;
   --charge-soft: #E8FF85;
+  --charge-glow: rgba(212, 255, 58, 0.15);
   --muted: #8A7A6B;
-  --line: rgba(26,15,8,0.14);
-  --line-soft: rgba(26,15,8,0.07);
+  --line: rgba(251, 246, 237, 0.10);
+  --line-soft: rgba(251, 246, 237, 0.06);
 }
 
 @theme inline {
-  --color-shell: var(--shell);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-raised: var(--surface-raised);
+  --color-surface-overlay: var(--surface-overlay);
   --color-cream: var(--cream);
-  --color-ivory: var(--ivory);
+  --color-cream-dim: var(--cream-dim);
+  --color-cream-muted: var(--cream-muted);
+  --color-cream-faint: var(--cream-faint);
+  --color-cream-ghost: var(--cream-ghost);
   --color-toffee: var(--toffee);
   --color-toffee-deep: var(--toffee-deep);
   --color-espresso: var(--espresso);
@@ -28,6 +42,7 @@
   --color-charge: var(--charge);
   --color-charge-deep: var(--charge-deep);
   --color-charge-soft: var(--charge-soft);
+  --color-charge-glow: var(--charge-glow);
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-line-soft: var(--line-soft);
@@ -43,8 +58,8 @@
 }
 
 body {
-  background: var(--cream);
-  color: var(--espresso);
+  background: var(--bg);
+  color: var(--cream);
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
@@ -56,9 +71,9 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 200;
-  opacity: 0.4;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.35;
+  mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 ::selection {
@@ -70,7 +85,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Reveal animation */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -81,19 +95,16 @@ html {
   transform: translateY(0);
 }
 
-/* Marquee */
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
 
-/* Glow pulse */
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 0.35; }
-  50% { transform: scale(1.1); opacity: 0.5; }
+  0%, 100% { transform: scale(1); opacity: 0.25; }
+  50% { transform: scale(1.1); opacity: 0.4; }
 }
 
-/* Blink */
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }

@@ -3,7 +3,7 @@ export function Hero() {
     <section className="min-h-screen px-5 md:px-10 pt-[110px] md:pt-[140px] pb-[60px] md:pb-[80px] relative grid grid-cols-1 md:grid-cols-[1.15fr_1fr] gap-[60px] items-center overflow-hidden max-w-[1400px] mx-auto">
       {/* Green glow */}
       <div
-        className="absolute top-[30%] -right-[10%] w-[550px] h-[550px] opacity-[0.35] blur-[60px] z-0 pointer-events-none"
+        className="absolute top-[30%] -right-[10%] w-[550px] h-[550px] opacity-[0.25] blur-[80px] z-0 pointer-events-none"
         style={{
           background: "radial-gradient(circle, var(--charge) 0%, transparent 65%)",
           animation: "pulse 8s ease-in-out infinite",
@@ -12,38 +12,38 @@ export function Hero() {
 
       {/* Copy */}
       <div className="relative z-[2]">
-        <div className="reveal inline-flex items-center gap-2 font-mono text-[11px] font-medium tracking-[0.15em] uppercase text-cocoa px-[14px] py-[7px] border border-line rounded-full bg-ivory mb-7">
-          <span className="w-[7px] h-[7px] rounded-full bg-charge-deep shadow-[0_0_8px_var(--charge-deep)]" style={{ animation: "blink 2s infinite" }} />
+        <div className="reveal inline-flex items-center gap-2 font-mono text-[11px] font-medium tracking-[0.15em] uppercase text-cream-muted px-[14px] py-[7px] border border-line rounded-full bg-surface mb-7">
+          <span className="w-[7px] h-[7px] rounded-full bg-charge shadow-[0_0_8px_var(--charge)]" style={{ animation: "blink 2s infinite" }} />
           Women&apos;s Pilates Lab &amp; Juice Bar
         </div>
 
-        <h1 className="reveal font-serif font-medium text-[clamp(54px,7.6vw,110px)] leading-[0.98] tracking-[-0.035em] text-espresso">
+        <h1 className="reveal font-serif font-medium text-[clamp(54px,7.6vw,110px)] leading-[0.98] tracking-[-0.035em] text-cream">
           Pilates with a<br />
           <span className="font-semibold relative inline-block">
             pulse.
-            <span className="absolute bottom-[0.1em] -left-[0.02em] -right-[0.02em] h-[0.28em] bg-charge -z-[1] -skew-x-[4deg]" />
+            <span className="absolute bottom-[0.1em] -left-[0.02em] -right-[0.02em] h-[0.28em] bg-charge/30 -z-[1] -skew-x-[4deg]" />
           </span>{" "}
           Juice<br />
           with a{" "}
           <span className="font-semibold relative inline-block">
             purpose.
-            <span className="absolute bottom-[0.1em] -left-[0.02em] -right-[0.02em] h-[0.28em] bg-charge -z-[1] -skew-x-[4deg]" />
+            <span className="absolute bottom-[0.1em] -left-[0.02em] -right-[0.02em] h-[0.28em] bg-charge/30 -z-[1] -skew-x-[4deg]" />
           </span>
         </h1>
 
-        <p className="reveal text-[17px] leading-[1.55] text-cocoa max-w-[440px] mt-7">
+        <p className="reveal text-[17px] leading-[1.55] text-cream-muted max-w-[440px] mt-7">
           CocoClassy is a women&apos;s Pilates lab and cold-pressed juice bar &mdash; engineered for the woman who wants her workout softer on the joints and sharper on results. Walk in foggy. Walk out electric.
         </p>
 
         <div className="reveal mt-[38px] flex gap-[14px] items-center flex-wrap">
           <a
             href="#cta"
-            className="bg-espresso text-cream px-[30px] py-4 rounded-full text-[14px] font-medium tracking-[0.02em] no-underline inline-flex items-center gap-2.5 border-[1.5px] border-espresso transition-all duration-250 hover:bg-charge hover:text-espresso hover:border-charge hover:shadow-[0_0_24px_var(--charge)] hover:-translate-y-0.5 group"
+            className="bg-charge text-espresso px-[30px] py-4 rounded-full text-[14px] font-medium tracking-[0.02em] no-underline inline-flex items-center gap-2.5 border-[1.5px] border-charge transition-all duration-250 hover:shadow-[0_0_30px_var(--charge)] hover:-translate-y-0.5 group"
           >
             Claim your first class
             <svg className="transition-transform group-hover:translate-x-1" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
           </a>
-          <a href="#method" className="text-espresso text-[14px] font-medium no-underline border-b-[1.5px] border-espresso pb-0.5 transition-colors hover:text-charge-deep hover:border-charge-deep">
+          <a href="#method" className="text-cream text-[14px] font-medium no-underline border-b-[1.5px] border-cream/40 pb-0.5 transition-colors hover:text-charge hover:border-charge">
             See the method
           </a>
         </div>
@@ -52,38 +52,38 @@ export function Hero() {
       {/* Bento info cards */}
       <div className="relative z-[2] h-[440px] md:h-[620px] hidden md:block">
         {/* Card 1 — The Studio */}
-        <div className="absolute w-[62%] h-[72%] top-0 right-0 rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(26,15,8,0.25)] bg-espresso text-cream p-8 flex flex-col justify-between transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]">
+        <div className="absolute w-[62%] h-[72%] top-0 right-0 rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)] bg-surface-raised border border-line p-8 flex flex-col justify-between transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]">
           <div>
             <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-charge">The Studio</span>
             <div className="mt-4 flex items-end gap-3">
-              <span className="font-serif text-[72px] font-medium leading-none tracking-[-0.04em]">12</span>
-              <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-cream/60 pb-3">max per class</span>
+              <span className="font-serif text-[72px] font-medium leading-none tracking-[-0.04em] text-cream">12</span>
+              <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-cream-faint pb-3">max per class</span>
             </div>
           </div>
           <div>
-            <div className="font-serif text-[26px] font-medium tracking-[-0.03em] leading-[1.1] mb-2">
+            <div className="font-serif text-[26px] font-medium tracking-[-0.03em] leading-[1.1] mb-2 text-cream">
               Springs. Straps. Stamina.
             </div>
-            <p className="text-[13px] leading-[1.5] text-cream/60 max-w-[260px]">
+            <p className="text-[13px] leading-[1.5] text-cream-faint max-w-[260px]">
               Low-impact, high-intensity reformer work in a women-only studio. Lights low. Music loud. Form perfect.
             </p>
           </div>
         </div>
 
         {/* Card 2 — Today's Press */}
-        <div className="absolute w-[32%] h-[32%] top-[38%] left-[48%] rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(26,15,8,0.25)] bg-charge border border-charge-deep flex items-center justify-center p-[18px] text-center transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]">
+        <div className="absolute w-[32%] h-[32%] top-[38%] left-[48%] rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)] bg-charge border border-charge-deep flex items-center justify-center p-[18px] text-center transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]">
           <div>
             <div className="font-serif text-[20px] font-medium leading-[1.1] tracking-[-0.015em] text-espresso">Today&apos;s press</div>
             <div className="font-serif text-[28px] font-semibold leading-none tracking-[-0.03em] text-espresso my-1.5">Green Glow</div>
-            <div className="font-mono text-[10px] tracking-[0.1em] text-espresso">KALE &middot; CUCUMBER &middot; LIME &middot; MINT</div>
+            <div className="font-mono text-[10px] tracking-[0.1em] text-espresso/80">KALE &middot; CUCUMBER &middot; LIME &middot; MINT</div>
           </div>
         </div>
 
         {/* Card 3 — Cold-pressed */}
-        <div className="absolute w-[54%] h-[58%] bottom-0 left-0 rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(26,15,8,0.25)] bg-shell border border-line p-7 flex flex-col justify-between transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]">
-          <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-charge-deep">Cold-pressed &middot; Daily</span>
+        <div className="absolute w-[54%] h-[58%] bottom-0 left-0 rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)] bg-surface border border-line p-7 flex flex-col justify-between transition-transform duration-500 hover:-translate-y-1.5 hover:scale-[1.015]">
+          <span className="font-mono text-[10px] tracking-[0.15em] uppercase text-charge">Cold-pressed &middot; Daily</span>
           <div>
-            <div className="font-serif text-[22px] font-medium tracking-[-0.025em] leading-[1.15] mb-3">
+            <div className="font-serif text-[22px] font-medium tracking-[-0.025em] leading-[1.15] mb-3 text-cream">
               Pressed this morning. For you.
             </div>
             <div className="space-y-2">
@@ -94,10 +94,10 @@ export function Hero() {
               ].map((j) => (
                 <div key={j.code} className="flex items-center justify-between border-t border-line pt-2">
                   <div className="flex items-center gap-2">
-                    <span className="font-mono text-[9px] tracking-[0.1em] text-muted">N&deg;{j.code}</span>
-                    <span className="font-serif text-[14px] font-medium tracking-[-0.02em]">{j.name}</span>
+                    <span className="font-mono text-[9px] tracking-[0.1em] text-cream-faint">N&deg;{j.code}</span>
+                    <span className="font-serif text-[14px] font-medium tracking-[-0.02em] text-cream-dim">{j.name}</span>
                   </div>
-                  <span className="font-mono text-[9px] tracking-[0.1em] text-charge-deep">{j.tag}</span>
+                  <span className="font-mono text-[9px] tracking-[0.1em] text-charge">{j.tag}</span>
                 </div>
               ))}
             </div>

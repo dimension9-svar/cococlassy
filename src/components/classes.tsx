@@ -13,12 +13,12 @@ export function Classes() {
   return (
     <section id="classes" className="px-5 md:px-10 py-[90px] md:py-[140px] max-w-[1400px] mx-auto">
       <div className="text-center mb-[70px]">
-        <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-cocoa mb-6 flex items-center justify-center gap-3">
+        <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-cream-faint mb-6 flex items-center justify-center gap-3">
           03 &middot; On the Schedule
         </div>
-        <h2 className="font-serif font-medium text-[clamp(44px,5.7vw,78px)] leading-[1.02] tracking-[-0.035em]">
+        <h2 className="font-serif font-medium text-[clamp(44px,5.7vw,78px)] leading-[1.02] tracking-[-0.035em] text-cream">
           Eight classes. One{" "}
-          <span className="text-charge-deep font-semibold">obsession</span>.
+          <span className="text-charge font-semibold">obsession</span>.
         </h2>
       </div>
 
@@ -26,20 +26,19 @@ export function Classes() {
         {classes.map((c) => (
           <div
             key={c.name}
-            className="bg-ivory border border-line rounded-[14px] p-[26px_26px_30px] relative overflow-hidden transition-all duration-300 hover:border-espresso hover:-translate-y-1 group"
+            className="bg-surface-raised border border-line rounded-[14px] p-[26px_26px_30px] relative overflow-hidden transition-all duration-300 hover:border-charge/40 hover:-translate-y-1 group"
           >
-            {/* Top accent bar on hover */}
             <div className="absolute top-0 left-0 right-0 h-0 bg-charge transition-all duration-300 group-hover:h-1" />
 
-            <div className="font-mono text-[11px] tracking-[0.1em] text-muted mb-4 flex justify-between">
+            <div className="font-mono text-[11px] tracking-[0.1em] text-cream-faint mb-4 flex justify-between">
               <span>{c.time}</span>
-              <span className="bg-shell px-2 py-0.5 rounded-full text-cocoa">{c.level}</span>
+              <span className="bg-surface-overlay px-2 py-0.5 rounded-full text-cream-muted">{c.level}</span>
             </div>
 
-            <h3 className="font-serif font-medium text-[26px] tracking-[-0.03em] leading-[1.15] mb-2.5">{c.name}</h3>
-            <p className="text-[13.5px] leading-[1.5] text-cocoa mb-6">{c.desc}</p>
+            <h3 className="font-serif font-medium text-[26px] tracking-[-0.03em] leading-[1.15] mb-2.5 text-cream">{c.name}</h3>
+            <p className="text-[13.5px] leading-[1.5] text-cream-muted mb-6">{c.desc}</p>
 
-            <a href="#cta" className="text-[12.5px] font-medium text-espresso no-underline inline-flex items-center gap-1.5 border-b border-espresso pb-0.5 transition-colors hover:text-charge-deep hover:border-charge-deep">
+            <a href="#cta" className="text-[12.5px] font-medium text-cream no-underline inline-flex items-center gap-1.5 border-b border-cream/30 pb-0.5 transition-colors hover:text-charge hover:border-charge">
               Book &rarr;
             </a>
           </div>

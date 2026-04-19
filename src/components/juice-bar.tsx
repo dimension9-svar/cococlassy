@@ -9,38 +9,35 @@ export function JuiceBar() {
   ];
 
   return (
-    <section id="juice" className="bg-espresso text-cream py-[90px] md:py-[140px] px-5 md:px-10 relative overflow-hidden">
+    <section id="juice" className="bg-surface py-[90px] md:py-[140px] px-5 md:px-10 relative overflow-hidden border-t border-b border-line">
       {/* Green glow */}
-      <div className="absolute -top-[200px] -left-[200px] w-[600px] h-[600px] opacity-[0.18] blur-[80px] pointer-events-none"
+      <div className="absolute -top-[200px] -left-[200px] w-[600px] h-[600px] opacity-[0.12] blur-[80px] pointer-events-none"
         style={{ background: "radial-gradient(circle, var(--charge) 0%, transparent 60%)" }}
       />
 
       <div className="max-w-[1400px] mx-auto relative z-[2]">
-        {/* Section label */}
         <div className="font-mono text-[11px] tracking-[0.2em] uppercase text-charge flex items-center gap-3 mb-6">
           <span className="w-7 h-px bg-charge" />
           02 &middot; The Juice Bar
         </div>
 
-        {/* Header */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[60px] items-end mb-[70px]">
-          <h2 className="font-serif font-medium text-[clamp(50px,6.6vw,96px)] leading-[0.98] tracking-[-0.04em]">
+          <h2 className="font-serif font-medium text-[clamp(50px,6.6vw,96px)] leading-[0.98] tracking-[-0.04em] text-cream">
             Pressed this morning.{" "}
             <span className="text-charge font-semibold">For you.</span>
           </h2>
-          <div className="text-cream/70 text-[15px] leading-[1.6] max-w-[380px]">
+          <div className="text-cream-muted text-[15px] leading-[1.6] max-w-[380px]">
             Every juice on the menu is cold-pressed in our studio kitchen within the last 24 hours. No concentrates. No heat. No shortcuts. Just what your body actually wanted after class.
           </div>
         </div>
 
-        {/* Menu grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 bg-cream/[0.12] border border-cream/[0.12]" style={{ gap: "1px" }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 bg-line border border-line" style={{ gap: "1px" }}>
           {juices.map((j) => (
-            <div key={j.code} className="bg-espresso p-[30px] md:p-[36px_30px] transition-colors hover:bg-cocoa group cursor-default">
+            <div key={j.code} className="bg-bg p-[30px] md:p-[36px_30px] transition-colors hover:bg-surface-raised group cursor-default">
               <div className="font-mono text-[11px] tracking-[0.12em] text-charge mb-[18px]">{j.code}</div>
-              <div className="font-serif font-medium text-[28px] leading-[1.15] tracking-[-0.03em] mb-2 transition-colors group-hover:text-charge">{j.name}</div>
-              <div className="text-[13.5px] leading-[1.55] text-cream/65 mb-[22px]">{j.desc}</div>
-              <div className="font-mono text-[13px] text-cream pt-[14px] border-t border-cream/15 flex justify-between">
+              <div className="font-serif font-medium text-[28px] leading-[1.15] tracking-[-0.03em] mb-2 text-cream transition-colors group-hover:text-charge">{j.name}</div>
+              <div className="text-[13.5px] leading-[1.55] text-cream-faint mb-[22px]">{j.desc}</div>
+              <div className="font-mono text-[13px] text-cream-dim pt-[14px] border-t border-line flex justify-between">
                 {j.price}
                 <span className="text-charge text-[10px] tracking-[0.1em]">{j.tag}</span>
               </div>
